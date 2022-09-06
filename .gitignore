@@ -1,0 +1,13 @@
+## Web.Spa and Native ignores
+.idea
+node_modules
+tmp
+dll
+aot
+dist
+.awcache
+*.log
+*.log.*
+coverage
+*.stackdump
+platforms

@@ -1,0 +1,13 @@
+rules:
+  indentation:
+    - 1
+    - size: 4
+  property-sort-order:
+    - 0
+  no-color-literals: 0
+  mixins-before-declarations: 0
+  no-empty-rulesets: 0
+  single-line-per-selector: 0
+  empty-line-between-blocks:
+   - 1
+   - ignore-single-line-rulesets: true

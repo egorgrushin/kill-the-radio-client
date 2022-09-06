@@ -1,0 +1,52 @@
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element, $blockRef: null) {
+	@if $blockRef {
+		#{$blockRef}__#{$element} {
+			@content;
+		}
+	} @else {
+		&__#{$element} {
+			@content;
+		}
+	}
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+	&--#{$modifier} {
+		@content;
+	}
+}
+
+/// @alias element
+@mixin e($element, $blockRef: null) {
+	@include element($element, $blockRef) {
+		@content;
+	}
+}
+
+/// @alias modifier
+@mixin m($modifier) {
+	@include modifier($modifier) {
+		@content;
+	}
+}
+
+@mixin blur($radius: 10px) {
+	filter: blur($radius);
+}
+
+@mixin non-select {
+	user-select: none;
+}
+
+
+@mixin vertical-align($position: absolute) {
+	position: $position;
+	top: 50%;
+	transform: translateY(-50%);
+}

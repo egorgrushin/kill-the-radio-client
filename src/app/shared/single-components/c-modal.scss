@@ -1,0 +1,5 @@
+.c-modal {
+	@include m('lg') {
+		max-width: 90%;
+	}
+}

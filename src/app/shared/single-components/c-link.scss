@@ -1,0 +1,9 @@
+.c-link {
+	cursor: pointer;
+	@include m('no-link') {
+		&, &:hover {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}

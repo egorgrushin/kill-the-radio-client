@@ -1,0 +1,7 @@
+.c-error {
+    padding: $base-padding;
+    font-weight: bold;
+    background: $fail-color;
+    color: $white;
+	margin-top: $base-padding * 2;
+}

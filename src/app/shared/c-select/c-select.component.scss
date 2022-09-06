@@ -1,0 +1,73 @@
+.c-select {
+	display: inline-block;
+	min-width: 200px;
+	width: 100%;
+	position: relative;
+
+	@include e('toggle-area') {
+		display: flex;
+		padding: 2px 10px;
+		padding-right: 0;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: center;
+		border: 1px solid #bbb;
+		border-radius: 2px;
+		user-select: none;
+
+		&:hover,
+		&:focus {
+			cursor: pointer;
+		}
+	}
+
+	@include e('selected-items') {
+		order: 0;
+		flex: 1 1 auto;
+		align-self: auto;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	@include e('selected-item') {
+		vertical-align: middle;
+	}
+
+	@include e('caret') {
+		vertical-align: middle;
+		padding: 0 10px;
+		text-align: center;
+		color: #999;
+	}
+
+	@include e('dropdown') {
+		display: none;
+		z-index: 1020;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+
+		background: #fff;
+		border: 1px solid #bbb;
+		border-top: 0;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	@include e('dropdown-item') {
+		padding: 2px 10px;
+
+		&.active,
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			background: #e1e5eb;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+.c-textbox {
+	padding: $base-padding;
+	outline: none;
+	border: 1px solid #bbb;
+	&:hover, &.focus {
+	    border-color: $neutral-color;
+	}
+	&.ng-dirty.ng-invalid {
+		border-color: $fail-color;
+	}
+	@include m('multiline') {
+		min-height: 50px;
+		resize: none;
+	}
+}

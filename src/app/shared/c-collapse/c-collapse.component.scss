@@ -1,0 +1,15 @@
+.c-collapse {
+	@include e('toggle') {
+		cursor: pointer;
+		background: #d3d3d3;
+		padding: 5px 10px;
+		user-select: none;
+	}
+	@include e('content') {
+		background: #ebebeb;
+		padding: 5px 10px;
+		@include m('collapsed') {
+			display: none;
+		}
+	}
+}

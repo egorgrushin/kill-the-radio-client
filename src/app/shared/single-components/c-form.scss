@@ -1,0 +1,32 @@
+.c-form {
+	$labelWidth: 90px;
+	$inputMargin: $labelWidth + $base-padding;
+	@include e('input-group') {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		margin-top: $base-padding;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	@include e('label') {
+		margin-right: $base-padding;
+		flex-basis: $labelWidth;
+	}
+	@include e('input') {
+		flex: 1 0 auto;
+	}
+	@include e('input-group-errors') {
+		flex: 1 0 calc(100% - #{$inputMargin});
+		margin-left: $inputMargin;
+		margin-top: $base-padding;
+	}
+	@include e('input-group-error') {
+		padding: $base-padding;
+		font-weight: bold;
+		background: $fail-color;
+		color: $white;
+		animation: forward ease-in-out 0.2s;
+	}
+}

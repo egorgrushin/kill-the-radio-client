@@ -1,0 +1,64 @@
+// Typography
+// The variable $font-stack-system set from bootstrap 4
+$font-stack-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-family: $font-stack-system;
+$heading-font-family: $base-font-family;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: 1.5em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$max-width: 1366px;
+$header-height: 60px;
+$white: #fff;
+$black: #000;
+$mts-color: #e20f00;
+$mts-color-2: #e20611;
+$mts-green-color: #3f9d2f;
+$login-button-color: #467fd7;
+$login-gray-color: #5e5e5e;
+
+$fail-color: $mts-color;
+$success-color: #6aff60;
+$accent-color: $mts-color-2;
+$neutral-color: #457AB1;
+$disabled-color: #eee;
+
+$base-border-radius: 7px;
+$base-font-size: 15px;
+$base-padding: 10px;
+$footer-background-color: $neutral-color;
+
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

@@ -1,0 +1,12 @@
+{
+    "indent_size": 4,
+    "indent_char": " ",
+    "indent_with_tabs": true,
+    "html": {
+        "wrap_attributes": "force-aligned"
+    },
+    "css": {
+        "end_with_newline": true,
+        "preserve_newlines": true
+    }
+}

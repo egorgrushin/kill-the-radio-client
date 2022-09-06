@@ -1,0 +1,38 @@
+.c-chat {
+	border: 1px solid $black;
+	padding: $base-padding;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	@include e('item') {
+		position: relative;
+		border: 1px solid $black;
+		padding: $base-padding / 2;
+		max-width: 70%;
+		margin-bottom: $base-padding;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include m('right') {
+			align-self: flex-end;
+		}
+	}
+	@include e('item-header') {
+		display: flex;
+		justify-content: space-between;
+	}
+	@include e('item-sender') {
+		font-weight: bold;
+	}
+	@include e('item-body') {
+	
+	}
+	@include e('item-datetime') {
+		margin-left: $base-padding;
+	}
+	@include m('no-border') {
+		border: none;
+		padding: 0;
+	}
+}

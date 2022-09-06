@@ -1,0 +1,20 @@
+<div class="c-select">
+	<div (click)="toggleOpen()"
+		 class="c-select__toggle-area">
+		<div class="c-select__selected-items">
+			<span *ngFor="let selected of _selectedItems"
+				  [innerHTML]="selected.source[displayPropName]"
+				  class="c-select__selected-item"></span>
+		</div>
+		<div class="c-select__caret"><i class="fa fa-caret-down"></i></div>
+	</div>
+	<div [ngClass]="{'active': _isOpened}"
+		 class="c-select__dropdown">
+		<div *ngFor="let item of _items"
+			 (mouseover)="onMouseOver(item)"
+			 (mouseup)="onSelect(item)"
+			 [ngClass]="{'active': isHover(item)}"
+			 [innerHTML]="item.source[displayPropName]"
+			 class="c-select__dropdown-item"></div>
+	</div>
+</div>

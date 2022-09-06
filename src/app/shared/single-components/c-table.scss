@@ -1,0 +1,21 @@
+.c-table {
+	table-layout: fixed;
+	@include e('row') {
+		border: 1px solid #eee;
+		@include m('curp') {
+			cursor: pointer;
+		}
+	}
+	@include e('cell') {
+		padding: $base-padding $base-padding * 2;
+		@include m('head') {
+			font-weight: bold;
+		}
+		@include m('right') {
+			text-align: right;
+		}
+		@include m('curp') {
+			cursor: pointer;
+		}
+	}
+}

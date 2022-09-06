@@ -1,0 +1,8 @@
+<div class="c-collapse">
+	<div (click)="isCollapsed = !isCollapsed"
+		  class="c-collapse__toggle">{{isCollapsed ? 'Показать' : 'Скрыть'}}</div>
+	<div [ngClass]="{'c-collapse__content--collapsed': isCollapsed}"
+		 class="c-collapse__content">
+		<ng-content></ng-content>
+	</div>
+</div>
