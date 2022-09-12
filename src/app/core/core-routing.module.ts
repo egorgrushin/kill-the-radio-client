@@ -2,7 +2,6 @@
 import { NgModule } from '@angular/core';
 
 import { AuthGuard } from '../auth/auth.guard';
-import { ScenariosComponent } from '../scenarios/scenarios/scenarios.component';
 import { HomeComponent } from '../home/home.component';
 
 export const APP_ROUTES: Routes = [

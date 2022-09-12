@@ -6,14 +6,12 @@ import { StoreModule } from '../store';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '../shared/shared.module';
-import { TreeModule } from '../tree/tree.module';
 import { ModalService } from './modal.service';
 
 @NgModule({
 	imports: [
 		SharedModule,
 		StoreModule,
-		TreeModule,
 		CoreRoutingModule,
 	],
 	declarations: [
@@ -21,7 +19,6 @@ import { ModalService } from './modal.service';
 		FooterComponent,
 	],
 	exports: [
-		TreeModule,
 		HeaderComponent,
 		FooterComponent,
 	],

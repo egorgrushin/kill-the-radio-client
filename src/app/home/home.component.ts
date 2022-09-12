@@ -2,8 +2,6 @@
 import { BaseComponent } from '../core/base.component';
 import { ILoadingState } from 'mts-store';
 import { Observable } from 'rxjs/Observable';
-import { SessionsView } from '../core/domain/views/sessions-view';
-import { ActivityLogs } from '../core/domain/entities/activity-logs/activity-logs';
 
 @Component({
 	selector: 'home',
