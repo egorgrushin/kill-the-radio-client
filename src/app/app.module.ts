@@ -10,6 +10,8 @@ import { DOMOverlayRenderer, ModalModule, Overlay, OverlayRenderer } from 'ngx-m
 import { BootstrapModalModule, Modal } from 'ngx-modialog/plugins/bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
+import { SearchModule } from './search/search.module';
+import { RoomModule } from './room/room.module';
 import { AuthModule } from './auth/auth.module';
 
 /* Devtools etc */
@@ -33,6 +35,8 @@ const MODAL_PROVIDERS = [
 @NgModule({
 	imports: [
 		HomeModule,
+		SearchModule,
+		RoomModule,
 		AuthModule,
 		BrowserModule,
 		CoreModule,
