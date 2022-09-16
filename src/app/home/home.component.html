@@ -3,7 +3,10 @@
 		<h1 class="home__logo">Kill The Radio</h1>
 		<div class="home__buttons">
 			<div class="home__button c-button" routerLink="search">Что слушают вокруг?</div>
-			<div class="home__button c-button c-button--accent" routerLink="room">Kill The Radio</div>
+			<div (click)="killTheRadio()"
+				 [ladda]="loadingState.isLoading"
+				 class="home__button c-button c-button--accent">Kill The Radio
+			</div>
 		</div>
 	</div>
 </div>

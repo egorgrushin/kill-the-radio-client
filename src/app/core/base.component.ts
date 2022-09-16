@@ -43,6 +43,19 @@ export class BaseComponent implements OnDestroy {
 		});
 	}
 
+	getPosition(callback) {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition((position) => {
+				const latlng = {
+					lat: position.coords.latitude,
+					lng: position.coords.longitude,
+				};
+				callback(latlng);
+			});
+		}
+		;
+	}
+
 	ngOnDestroy(): void {
 		this.subscriptions.forEach(s => s.unsubscribe());
 	}

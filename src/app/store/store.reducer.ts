@@ -2,6 +2,7 @@ import * as fromRouter from '@ngrx/router-store';
 import { authReducer } from '../auth';
 import { API_URL } from '../core/core.types';
 import { MtsStore } from 'mts-store';
+import { Rooms } from "../core/domain/entities/rooms";
 
 const reducersMap = {
 	router: fromRouter.routerReducer,
@@ -14,6 +15,7 @@ export const mtsStore = new MtsStore({
 
 export const reducers = mtsStore
 	.fillDomain([
+		Rooms,
 	])
 	.fillViews([
 	])

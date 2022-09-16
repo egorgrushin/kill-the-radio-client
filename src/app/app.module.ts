@@ -1,6 +1,9 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {
+	AgmCoreModule
+} from '@agm/core';
 /* Dev Imports */
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
 

@@ -1,5 +1,13 @@
 <div class="c-page search">
 	<div class="c-page__wrapper">
-		Map
+		<agm-map
+			*ngIf="map"
+			[latitude]="map.lat"
+			[longitude]="map.lng"
+			[zoom]="map.zoom"
+			[disableDefaultUI]="false"
+			[zoomControl]="false">
+		
+		</agm-map>
 	</div>
 </div>

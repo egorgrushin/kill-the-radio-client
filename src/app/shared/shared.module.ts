@@ -10,6 +10,9 @@ import { NgPipesModule } from 'ng-pipes';
 import { CSelectComponent } from './c-select/c-select.component';
 import { CCollapseComponent } from './c-collapse/c-collapse.component';
 import { NgxErrorsModule } from '@ultimate/ngxerrors';
+import {
+	AgmCoreModule
+} from '@agm/core';
 
 @NgModule({
 	imports: [
