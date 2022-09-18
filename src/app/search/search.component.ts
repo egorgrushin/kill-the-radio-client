@@ -19,7 +19,7 @@ export class SearchComponent extends BaseComponent {
 				lat: latlng.lat,
 				lng: latlng.lng,
 				zoom: 15,
-			};
+			}
 		});
 	}
 

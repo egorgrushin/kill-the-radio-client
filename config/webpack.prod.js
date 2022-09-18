@@ -26,7 +26,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ENV = 'production';
 const IS_DEBUG = false;
-const API_HOST = 'guidesignerapi20170726072506.azurewebsites.net'; // null means to be relative
+const API_HOST = null; // null means to be relative
 const API_PORT = '80';
 const SOCKET_PORT = '9000';
 const BASE_HREF = '/';

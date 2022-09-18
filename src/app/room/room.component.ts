@@ -11,6 +11,7 @@ import { Rooms } from "../core/domain/entities/rooms";
 	styleUrls: ['./room.component.scss'],
 })
 export class RoomComponent extends BaseComponent {
+	map: {};
 	loadingState: ILoadingState = {};
 	room: any;
 
@@ -21,10 +22,23 @@ export class RoomComponent extends BaseComponent {
 	ngOnInit(): void {
 		this.route.paramMap.map(p => p.get('id'))
 			.switchMap((id) => Rooms.getById(id, {local: false}))
-			.subscribe(room => {
+			.subscribe((room: any) => {
 				console.log(this.room);
 				this.room = room;
+				if (room) {
+					this.map = {
+						zoom: 15,
+						lat: +room.latlng.lat,
+						lng: +room.latlng.lng,
+					};
+				}
+
 			});
+
+
+		Rooms.getState().subscribe((ls) => {
+		    this.loadingState = ls;
+		})
 		// if ()
 		// Room.find;
 	}

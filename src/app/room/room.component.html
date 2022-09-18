@@ -1,5 +1,15 @@
 <div class="c-page room">
 	<div class="c-page__wrapper">
-		Room
+		<div *ngIf="loadingState.isLoading">Загружается..</div>
+		<div *ngIf="!loadingState.isLoading">Комната: ({{room.id}})</div>
+		<agm-map
+			*ngIf="map"
+			[latitude]="map.lat"
+			[longitude]="map.lng"
+			[zoom]="map.zoom"
+			[disableDefaultUI]="false"
+			[zoomControl]="false">
+			<agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
+		</agm-map>
 	</div>
 </div>
