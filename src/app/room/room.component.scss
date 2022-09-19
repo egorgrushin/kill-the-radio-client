@@ -1,3 +1,14 @@
 .room {
-
+	@include e('player') {
+		margin-top: 20px;
+		width: 100%;
+	}
+	
+	@include e('playlist') {
+		border: 1px solid #000;
+		background: #fff;
+		padding: 10px;
+		min-height: 200px;
+		margin-bottom: 20px;
+	}
 }

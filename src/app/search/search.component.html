@@ -7,7 +7,10 @@
 			[zoom]="map.zoom"
 			[disableDefaultUI]="false"
 			[zoomControl]="false">
-			<agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
+			<agm-marker *ngFor="let room of rooms"
+						(click)="goToRoom(room.id)"
+						[latitude]="room.latlng.lat"
+						[longitude]="room.latlng.lng"></agm-marker>
 		</agm-map>
 	</div>
 </div>

@@ -7,7 +7,7 @@
     "webpack-server:dev": "webpack-dev-server --config config/webpack.dev.js --open --progress --profile --watch --inline --hot",
     "start": "npm run webpack-server:dev",
     "start:remote": "cross-env API_HOST= API_PREFIX=api API_PORT=80 SOCKET_PORT=9000 npm run start",
-    "start:fabric": "cross-env API_PORT=9001 API_PREFIX=/api npm run start",
+    "start:fabric": "cross-env API_PORT=9001 API_PREFIX=api npm run start",
     "stub:watch": "cd ../server && npm run dev:watch",
     "stub": "cd ../server && npm run start:dev",
     "tslint": "tslint",
